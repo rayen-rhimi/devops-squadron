@@ -1,0 +1,11 @@
+replicaCount: 1
+app:
+  name: space-beacon
+image:
+  repository: rayenrhimi/spacebeacon
+service:
+  type: LoadBalancer
+  port: 80
+  name: space-beacon-svc
+container:
+  port: 80
