@@ -83,6 +83,24 @@ You should now be able to read the message of the app: "Greetings from the DevOp
 
 By following these instructions, you'll successfully deploy and access the Space Beacon app using Helm in your EKS cluster.
 
+# Project Decisions and Remarks 
+## Develop and dockerize the space-beacoon app
+1. **Choice of Technology**: Initially, I developed the "Space Beacon" app using Spring Boot. Due to concerns about the large-sized Docker base image, I switched to developing the app with Node.js, significantly reducing the Docker image size.
+
+2. **Dockerfile Optimization**: To further optimize the Docker image size, I chose the Alpine base image, reducing the image size while maintaining functionality.
+
+3. **Security Considerations**: I conducted a vulnerability scan on the chosen Alpine base image version 9 to ensure a secure foundation for the application.
+
+4. **Non-Root User**: To enhance security, I ensured the Dockerfile doesn't use the root user.
+
+## Setting Up an Amazon EKS Cluster
+
+To set up an Amazon Elastic Kubernetes Service (EKS) cluster, you are required to have a minimum of two subnets in two different Availability Zones (AZs). In my configuration, I created two public subnets to meet this requirement instead of one.
+
+   
+
+
+
 
 
 
