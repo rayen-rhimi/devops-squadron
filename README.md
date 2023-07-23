@@ -1,5 +1,4 @@
-# Devops 
-Squadron
+# Devops-Squadron
 # Project Objective
 
 The main objective of this project is to deploy the "Space Beacon" application on an EKS (Amazon Elastic Kubernetes Service) cluster using Helm. The project involves creating a Helm chart to manage the application's deployment, along with all the necessary resources.
